@@ -36,3 +36,7 @@ It extends the classic 8-bit 65C02 with transparent memory banking, protection, 
 - Suitable for FPGA SoCs, retro systems, and embedded designs
 
 See the **65C02MMU Manual v1.3.1** for full documentation and examples.
+
+## License
+This project is licensed under the GNU GPL v3.0.
+(C) Renato Bugge 2026
