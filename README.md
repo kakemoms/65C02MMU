@@ -37,6 +37,10 @@ It extends the classic 8-bit 65C02 with transparent memory banking, protection, 
 
 See the **65C02MMU Manual v1.3.1** for full documentation and examples.
 
+## Known bugs
+- Setting BANK_REG_MEM bit ON, displays the internal registers in the $0000-$01FF area. Registers in the $0200-$03FF area are not shown.
+- Writing to the internal registers in the $0000-$01FF area does not work properly and can lead to a cpu crash.
+
 ## License
 This project is licensed under the GNU GPL v3.0.
 (C) Renato Bugge 2026
