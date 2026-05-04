@@ -1,7 +1,7 @@
 # 65C02MMU Verilog Core
 
-The **65C02MMU** is a fully compatible **65C02 CPU core with an integrated MMU**, written in Verilog.
-It extends the classic 8-bit 65C02 with transparent memory banking, protection, and multi-bank execution
+The **65C02MMU** is a fully compatible **65C02 CPU core with an integrated MMU** OR ***a stand-alone MMU that can operate beside a real 6502/65C02***, all written in Verilog. 
+They extends the classic 8-bit 65C02 with transparent memory banking, protection, and multi-bank execution
 — without introducing new opcodes or breaking existing software.
 
 ## Key Features
@@ -10,8 +10,8 @@ It extends the classic 8-bit 65C02 with transparent memory banking, protection, 
 - **Integrated MMU** using unused 6502/65C02 NOP opcodes (no new ISA required)
 - **20-bit or 24-bit addressing (1 MiB or 16 MiB)** supported today (V1.3: 20-bit or V1.4: 24-bit)
 - **Two banking modes**
-  - 4 KiB window banking (legacy-friendly)
-  - Full 64 KiB banking (segmented execution)
+  - 4 KiB window banking (legacy-friendly, but only for integrated MMU)
+  - Full 64 KiB banking (segmented execution - all MMU verions)
 - **Independent code and data banks** (JBANK vs FBANK)
 - **Zero-cycle bank switching** for most operations
 - **Bank-aware JMP/JSR/RTS/RTI** with automatic return-bank tracking
